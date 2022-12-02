@@ -10,7 +10,7 @@ function  Nav(){
     <>
     <nav className=" z-[100] sticky top-0 bg-white border-gray-200 px-2 md:px-4 py-2.5 dark:bg-gray-900">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-        <Link  className="flex items-center">
+        <Link to={'/books/store'} className="flex items-center">
           <img
             src="https://cdn-icons-png.flaticon.com/512/2702/2702154.png"
             className="mr-3 h-6 sm:h-9"
@@ -94,8 +94,9 @@ function  Nav(){
           </ul>
         </div>
       </div>
+  <hr className=" mt-2 border-gray-200 sm:mx-auto dark:border-gray-700" />
+
     </nav>
-  <hr className=" mt-0.5 border-gray-200 sm:mx-auto dark:border-gray-700" />
   </>
   );
 
