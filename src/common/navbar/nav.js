@@ -1,5 +1,3 @@
-import Collapse from "./collapse";
-
 const targetEl = document.getElementById('targetEl');
 const triggerEl = document.getElementById('triggerEl');
 

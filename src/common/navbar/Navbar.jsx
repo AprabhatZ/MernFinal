@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 // import './nav';
 import { Navbar } from "flowbite-react";
+import { Navigate } from "react-router-dom";
+
 
 function  Nav(){
-
-
+const logout = ()=>{
+  const token = localStorage.getItem("access-token");
+  localStorage.clear();
+  //console.log(token);
+  return<Navigate to="/login" />
+}
 
   return (
     <>
@@ -85,12 +91,18 @@ function  Nav(){
 
             <li>
               <Link
-                to="#"
+                to="/user"
                 className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
-                Author
+                Users
               </Link>
             </li>
+          <Link>
+          <li onClick={()=>logout()} className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                Logout
+            </li>
+          </Link>
+         
           </ul>
         </div>
       </div>

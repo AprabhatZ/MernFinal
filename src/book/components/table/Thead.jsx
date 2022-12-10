@@ -2,11 +2,11 @@ function Thead({items}){
 
     return(
 
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 {
                     items.map((item)=>{
-                        return   <th scope="col" class="py-3 px-6">{item}</th>
+                        return   <th scope="col" className="py-3 px-6">{item}</th>
                     })
                 
 
